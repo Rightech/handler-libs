@@ -15,10 +15,12 @@ export function ensureTable(value) {
   }
 
   /* ensure all table pairs to be numbers */
-  table = table.map(([a, b]) => [
-    parseFloat(a.toString()),
-    parseFloat(b.toString()),
-  ]);
+  table = table
+    .map(([a, b]) => [
+      parseFloat(a && a.toString()),
+      parseFloat(b && b.toString()),
+    ])
+    .filter(([a, b]) => isFinite(a) && isFinite(b));
   return table;
 }
 
@@ -42,6 +44,14 @@ export function parseTable(raw) {
 }
 
 export function piecewise(table) {
+  if (!Array.isArray(table)) {
+    table = ensureTable(table);
+  }
+
+  if (!table || !table.length) {
+    throw new Error("[adc] empty table");
+  }
+
   return function (x) {
     // bisect
     let lo = 0;
