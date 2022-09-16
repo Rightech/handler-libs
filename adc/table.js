@@ -8,10 +8,10 @@ export function chunk(array = [], size = 2) {
   return result;
 }
 
-export function ensure(value) {
+export function ensureTable(value) {
   let table = value;
   if (!Array.isArray(value)) {
-    table = parse(value);
+    table = parseTable(value);
   }
 
   /* ensure all table pairs to be numbers */
@@ -22,7 +22,7 @@ export function ensure(value) {
   return table;
 }
 
-export function parse(raw) {
+export function parseTable(raw) {
   raw = raw.toString();
 
   try {
@@ -30,10 +30,11 @@ export function parse(raw) {
   } catch {}
 
   const cells = raw
-    .split(" ")
+    .split(";")
     .map((x) => x.trim())
     .filter((x) => !!x)
-    .map((x) => x.replace(",", ""))
+    .map((x) => x.trim())
+    .flatMap((x) => x.split(","))
     .map((x) => x.trim())
     .map((x) => +x);
 
