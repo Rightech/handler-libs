@@ -1,4 +1,4 @@
-import { toUint8Array } from "https://unpkg.com/js-base64@3.7.2/base64.mjs";
+import { toUint8Array } from "https://raw.githubusercontent.com/dankogai/js-base64/3.7.2/base64.mjs";
 
 /**
  * @param {string} b64
