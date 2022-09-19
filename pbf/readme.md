@@ -19,11 +19,11 @@ message Position {
 
 Using `pbf` CLI tool: 
 
-1. Compile reader code
+1. compile reader code
 ```sh
 > npx pbf example.proto --browser --no-write
 ```
-2. And copy/paste compiled code from stdout to handler code
+2. copy/paste compiled code from stdout to handler code
 
 
 ### Example handler code
