@@ -1,6 +1,6 @@
 
 
-# HEX
+# Hex
 
 ## iBeacon example
 
