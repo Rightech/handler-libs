@@ -9,13 +9,12 @@ export function sanitize(hex = "") {
 export function decode(hex) {
   hex = sanitize(hex);
 
-  const b = new Uint8Array(hex.length / 2);
-
+  const a = new Uint8Array(hex.length / 2);
   hex.match(/.{1,2}/g).forEach((v, i) => {
-    b[i] = parseInt(v, 16);
+    a[i] = parseInt(v, 16);
   });
 
-  return new DataView(b.buffer);
+  return new DataView(a.buffer);
 }
 
 /**
