@@ -9,7 +9,7 @@
 import * as hex from "https://raw.githubusercontent.com/rightech/handler-libs/1.0.4/enc/hex.js";
 
 /**
- * @param {number} payload hex-encoded BLE manufacturer data
+ * @param {string} payload hex-encoded BLE manufacturer data
  */
 export default function process(payload) {
   const view = hex.decode(payload);
