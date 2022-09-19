@@ -6,5 +6,5 @@
 ## Encoders / Decoders
 
 - [hex](./enc#hex)
-- [base64](./enc#base64)
+- [base64](./enc/readme.md#base64)
 - [protocol buffers](./pbf)
