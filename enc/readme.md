@@ -36,7 +36,7 @@ export function process(payload) {
 
 ```js
 /**
- * @param {string} payload base64-encoded [lat,lon] payload
+ * @param {string} payload base64-encoded [lat,lon]
  */
 export function process(payload) {
   const view = ric.base64.decode(payload);
@@ -58,7 +58,7 @@ export function process(payload) {
 import { decode as decodeBase64 } from "https://raw.githubusercontent.com/rightech/handler-libs/1.0.6/enc/base64.js";
 
 /**
- * @param {string} payload base64-encoded [lat,lon] payload
+ * @param {string} payload base64-encoded [lat,lon]
  */
 export function process(payload) {
   const view = decodeBase64(payload);
