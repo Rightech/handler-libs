@@ -55,13 +55,13 @@ export function process(payload) {
 ## ESM polyfill
 
 ```js
-import * as base64 from "https://raw.githubusercontent.com/rightech/handler-libs/1.0.6/enc/base64.js";
+import { decode as decodeBase64 } from "https://raw.githubusercontent.com/rightech/handler-libs/1.0.6/enc/base64.js";
 
 /**
  * @param {string} payload base64-encoded [lat,lon] payload
  */
 export function process(payload) {
-  const view = base64.decode(payload);
+  const view = decodeBase64(payload);
 
   const lat = view.getFloat32(0);
   const lon = view.getFloat32(4);
