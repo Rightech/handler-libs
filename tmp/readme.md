@@ -2,7 +2,7 @@
 ## Hello world
 
 ```js
-import { sum } from "https://raw.githubusercontent.com/rightech/handler-libs/1.0.5/tmp/example.js";;
+import { sum } from "https://raw.githubusercontent.com/rightech/handler-libs/1.0.5/tmp/example.js";
 
 /**
  * @param {number} a example value #1
