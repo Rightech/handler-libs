@@ -24,7 +24,6 @@
 
 ### Piecewise linear approximation
 ```js
-
 import { piecewise } from "https://raw.githubusercontent.com/rightech/handler-libs/1.0.6/adc/table.js";
 
 /**
