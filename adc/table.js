@@ -1,12 +1,4 @@
-export function chunk(array = [], size = 2) {
-  array = [...array];
-
-  const result = [];
-  while (array.length) {
-    result.push(array.splice(0, size));
-  }
-  return result;
-}
+import { chunk } from "https://raw.githubusercontent.com/rightech/handler-libs/1.0.6/misc/array.js";
 
 export function ensureTable(value) {
   let table = value;
@@ -16,19 +8,25 @@ export function ensureTable(value) {
 
   /* ensure all table pairs to be numbers */
   table = table
-    .map(([a, b]) => [
-      parseFloat(a && a.toString()),
-      parseFloat(b && b.toString()),
+    .map(([x, y]) => [
+      parseFloat(x && x.toString()),
+      parseFloat(y && y.toString()),
     ])
-    .filter(([a, b]) => isFinite(a) && isFinite(b));
+    .filter(([x, y]) => isFinite(x) && isFinite(y));
   return table;
 }
 
 export function parseTable(raw) {
-  raw = raw.toString();
+  raw = (raw || "").toString();
 
   try {
-    return JSON.parse(raw);
+    const json = JSON.parse(raw);
+    if (typeof json === "string") {
+      // already should be array here,
+      // but let's try another one
+      return JSON.parse(json);
+    }
+    return json;
   } catch {}
 
   const cells = raw
