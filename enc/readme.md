@@ -14,11 +14,8 @@ import * as hex from "https://raw.githubusercontent.com/rightech/handler-libs/1.
 export default function process(payload) {
   const view = hex.decode(payload);
 
-  if (view.getUint16(0) !== 0x4c00) {
-    throw new Error("[ble] not apple");
-  }
-  if (view.getUint16(2) !== 0x0215) {
-    throw new Error("[ble] not ibeacon");
+  if (view.getUint16(0) !== 0x4c00 || view.getUint16(2) !== 0x0215) {
+    throw new Error("not ibeacon payload");
   }
 
   const uuid = hex.encode(view.buffer.slice(4, 20));
