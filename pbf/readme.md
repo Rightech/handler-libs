@@ -59,4 +59,8 @@ export default function process(payload) {
   const { lat, lon, x, y } = Position.read(pbf);
   return { lat, lon, x, y };
 }
+
+/**
+ * @test payload "CflJtU/H30tAEXrHKTqSz0JAGBQgKA=="
+ */
 ```
