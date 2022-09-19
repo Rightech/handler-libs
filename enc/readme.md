@@ -5,7 +5,7 @@
 ## iBeacon example
 
 ```js
-import * as hex from "https://raw.githubusercontent.com/rightech/handler-libs/1.0.4/enc/hex.js";
+import * as hex from "https://raw.githubusercontent.com/rightech/handler-libs/1.0.6/enc/hex.js";
 
 /**
  * @param {string} payload hex-encoded BLE manufacturer data
@@ -52,13 +52,13 @@ export function process(payload) {
 ## ESM polyfill
 
 ```js
-import { toUint8Array } from "https://raw.githubusercontent.com/dankogai/js-base64/3.7.2/base64.mjs";
+import * as base64 from "https://raw.githubusercontent.com/rightech/handler-libs/1.0.6/enc/base64.js";
 
 /**
  * @param {string} payload hex-encoded [lat,lon] payload
  */
 export function process(payload) {
-  const view = new DataView(toUint8Array(payload).buffer);
+  const view = base64.decode(payload);
 
   const lat = view.getFloat32(0);
   const lon = view.getFloat32(4);
