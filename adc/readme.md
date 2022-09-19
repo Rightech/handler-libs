@@ -37,4 +37,8 @@ export default function process(adc1, table1) {
   return { value1 };
 }
 
+/**
+ * @test adc1 3.14
+ * @test table1 "[[0, 0], [6.8, 1], [7.2, 5]]"
+ */
 ```
