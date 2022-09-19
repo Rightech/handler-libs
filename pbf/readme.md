@@ -19,7 +19,7 @@ message Position {
 ```sh
 > npx pbf example.proto --browser --no-write
 ```
-2. copy/paste compiled code from stdout to handler code
+2. copy/paste compiled code to handler
 
 
 ### Example handler code
