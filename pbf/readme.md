@@ -1,6 +1,6 @@
 
 
-## Example Protocol Buffers file [`example.proto`](./example.proto)
+## Example Protocol Buffers [`file`](./example.proto)
 
 ```proto
 syntax = "proto3";
