@@ -1,6 +1,6 @@
 # Righech IoT Handler libraries and examples 
 
-- [hello world](./tmp)
+- [hello world](./tmp#hello-world)
 - [adc](./adc)
 
 ## Encoders / Decoders
