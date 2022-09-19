@@ -31,7 +31,7 @@ import { piecewise } from "https://raw.githubusercontent.com/rightech/handler-li
  * @param {number} adc1 adc value from object packet
  * @param {string} table1 adc table from object config
  */
-export default function process(adc1, table1) {
+export function process(adc1, table1) {
   const value1 = piecewise(table1)(adc1);
 
   return { value1 };

@@ -10,7 +10,7 @@ import * as hex from "https://raw.githubusercontent.com/rightech/handler-libs/1.
 /**
  * @param {string} payload hex-encoded BLE manufacturer data
  */
-export default function process(payload) {
+export function process(payload) {
   const view = hex.decode(payload);
 
   if (view.getUint16(0) !== 0x4c00 || view.getUint16(2) !== 0x0215) {

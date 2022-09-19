@@ -52,7 +52,7 @@ Position._readField = function (tag, obj, pbf) {
 /**
  * @param {string} payload base64 encoded protobuf
  */
-export default function process(payload) {
+export function process(payload) {
   const { buffer } = ric.base64.decode(payload);
 
   const { lat, lon, x, y } = Position.read(new Pbf(buffer));
