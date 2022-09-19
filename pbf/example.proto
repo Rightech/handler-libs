@@ -1,0 +1,8 @@
+syntax = "proto3";
+
+message Position {
+    double lat = 1;
+    double lon = 2;
+    sint32 x = 3;
+    sint32 y = 4;
+}
