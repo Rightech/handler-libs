@@ -15,11 +15,11 @@ message Position {
 
 ## With pre-compiled reader
 
-1. compile reader code using [pbf](https://github.com/mapbox/pbf) library CLI tool:
+1. generate protobuf reader with [pbf](https://github.com/mapbox/pbf) CLI tool:
 ```sh
 > npx pbf example.proto --browser --no-write
 ```
-2. copy/paste compiled code to handler
+2. copy/paste generated code to handler
 
 
 ### Example handler code
@@ -27,7 +27,7 @@ message Position {
 import Pbf from "https://cdn.skypack.dev/pbf@3.2.1";
 
 /**
- * declare non-standard `self` variable, because it's used in compiled code
+ * declare non-standard `self` variable, because it's used in generated code
  * @type {any} */
 const self = {};
 
