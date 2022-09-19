@@ -54,9 +54,8 @@ Position._readField = function (tag, obj, pbf) {
  */
 export default function process(payload) {
   const { buffer } = ric.base64.decode(payload);
-  const pbf = new Pbf(buffer);
 
-  const { lat, lon, x, y } = Position.read(pbf);
+  const { lat, lon, x, y } = Position.read(new Pbf(buffer));
   return { lat, lon, x, y };
 }
 
