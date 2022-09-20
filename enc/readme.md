@@ -60,7 +60,7 @@ export function process(payload) {
  */
 ```
 
-## ESM alternative
+## ES module alternative
 
 ```js
 import { toUint8Array } from "https://raw.githubusercontent.com/dankogai/js-base64/3.7.2/base64.mjs";
