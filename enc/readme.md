@@ -32,6 +32,14 @@ export function process(payload) {
 
 # Base64
 
+## Example payload
+
+|         | offset | data type  | endianness |
+|---------|--------|------------|------------|
+| lat     | 0      | float32    | big        |
+| lon     | 4      | float32    | big        |
+
+
 ## Built-in decoder
 
 ```js
