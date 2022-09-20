@@ -34,10 +34,10 @@ export function process(payload) {
 
 ## Example payload
 
-|         | offset | data type  | endianness |
-|---------|--------|------------|------------|
-| lat     | 0      | float32    | big        |
-| lon     | 4      | float32    | big        |
+|         | data type  | endianness | byte offset |
+|---------|------------|------------|-------------|
+| lat     | float32    | big        | 0           |
+| lon     | float32    | big        | 4           |
 
 
 ## Built-in decoder
