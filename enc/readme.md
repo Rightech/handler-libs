@@ -1,6 +1,6 @@
 
 
-# Hex
+# HEX
 
 ## iBeacon example
 
@@ -80,4 +80,23 @@ export function process(payload) {
 /**
  * @test payload "Ql8Z6EIWn/M="
  */
+```
+
+# XML
+
+```js
+import Parser from "https://cdn.skypack.dev/fast-xml-parser@4.0.10/src/xmlparser/XMLParser.js";
+
+export function process() {
+  const xml = new Parser();
+  const res = xml.parse(`
+    <pos>
+      <x>10</x>
+      <y>20</y>
+    </pos>
+  `);
+
+  const { x, y } = res.pos;
+  return { x, y };
+}
 ```
