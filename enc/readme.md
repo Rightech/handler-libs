@@ -116,7 +116,8 @@ import { decode } from "https://cdn.skypack.dev/@msgpack/msgpack@2.8.0/dist.es5+
  * @param {string} payload msgpack-encoded [x,y]
  */
 export function process(payload) {
-  const { x, y } = decode(payload);
+  const { buffer } = ric.base64.decode(payload);
+  const { x, y } = decode(buffer);
   return { x, y };
 }
 
