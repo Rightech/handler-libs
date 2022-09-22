@@ -104,3 +104,23 @@ export function process() {
   return { x, y };
 }
 ```
+
+# MessagePack
+
+with [@msgpack/msgpack](https://github.com/msgpack/msgpack-javascript)
+
+```js
+import { decode } from "https://cdn.skypack.dev/@msgpack/msgpack@2.8.0/dist.es5+esm/decode.mjs";
+
+/**
+ * @param {string} payload msgpack-encoded [x,y]
+ */
+export function process(payload) {
+  const { x, y } = decode(payload);
+  return { x, y };
+}
+
+/**
+ * @test payload "gqF4CqF5FA=="
+ */
+```
