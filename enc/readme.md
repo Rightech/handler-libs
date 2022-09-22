@@ -62,6 +62,8 @@ export function process(payload) {
 
 ## ES module
 
+with [js-base64](https://github.com/dankogai/js-base64)
+
 ```js
 import { toUint8Array } from "https://raw.githubusercontent.com/dankogai/js-base64/3.7.2/base64.mjs";
 
@@ -83,6 +85,8 @@ export function process(payload) {
 ```
 
 # XML
+
+with [fast-xml-parser](https://github.com/NaturalIntelligence/fast-xml-parser)
 
 ```js
 import Parser from "https://cdn.skypack.dev/fast-xml-parser@4.0.10/src/xmlparser/XMLParser.js";
