@@ -17,7 +17,7 @@ function decodeUplink(input) {
   };
 }
 
-export function process(time, payload, fPort) {
+export function process(payload, fPort, time) {
   const view = ric.base64.decode(payload);
   
   const input = {
