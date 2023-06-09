@@ -13,5 +13,7 @@
 - [HEX](./dec/readme.md#hex)
 - [Base64](./dec/readme.md#base64)
 - [Binary](./dec/readme.md#binary)
+- [XML](./dec/readme.md#xml)
+- [MessagePack](./dec/readme.md#messagepack)
 - [Protocol Buffers](./pbf)
 - [LoRaWAN codec API](./lora)
