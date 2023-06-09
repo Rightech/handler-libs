@@ -10,7 +10,8 @@
 
 ## Decoders
 
-- [hex](./dec/readme.md#hex)
-- [base64](./dec/readme.md#base64)
-- [binary](./dec/readme.md#binary)
-- [protocol buffers](./pbf)
+- [HEX](./dec/readme.md#hex)
+- [Base64](./dec/readme.md#base64)
+- [Binary](./dec/readme.md#binary)
+- [Protocol Buffers](./pbf)
+- [LoRaWAN codec API](./lora)

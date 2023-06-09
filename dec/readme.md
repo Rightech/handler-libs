@@ -5,7 +5,7 @@
 ## iBeacon example
 
 ```js
-import * as hex from "https://raw.githubusercontent.com/rightech/handler-libs/1.0.6/enc/hex.js";
+import * as hex from "https://raw.githubusercontent.com/rightech/handler-libs/1.0.7/dec/hex.js";
 
 /**
  * @param {string} payload hex-encoded BLE manufacturer data
