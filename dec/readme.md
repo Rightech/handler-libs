@@ -89,10 +89,10 @@ export function process(payload) {
 with [binary-parser](https://github.com/keichi/binary-parser)
 
 ```js
-import { Parser } from "https://esm.sh/binary-parser@2.2.1";
+import { Parser as BinaryParser } from "https://esm.sh/binary-parser@2.2.1";
 
 // slightly shortened example from library's readme
-const IpHeaderShort = new Parser()
+const IpHeaderShort = new BinaryParser()
   .endianness("big")
   .bit4("version")
   .bit4("headerLength")
