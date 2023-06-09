@@ -10,6 +10,6 @@
 
 ## Decoders
 
-- [hex](./enc/readme.md#hex)
-- [base64](./enc/readme.md#base64)
+- [hex](./dec/readme.md#hex)
+- [base64](./dec/readme.md#base64)
 - [protocol buffers](./pbf)
