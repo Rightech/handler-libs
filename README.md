@@ -12,4 +12,5 @@
 
 - [hex](./dec/readme.md#hex)
 - [base64](./dec/readme.md#base64)
+- [binary](./dec/readme.md#binary)
 - [protocol buffers](./pbf)

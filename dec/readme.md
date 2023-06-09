@@ -84,6 +84,35 @@ export function process(payload) {
  */
 ```
 
+# Binary
+
+with [binary-parser](https://github.com/keichi/binary-parser)
+
+```js
+import { Parser } from "https://esm.sh/binary-parser@2.2.1";
+
+// slightly shortened example from library's readme
+const IpHeaderShort = new Parser()
+  .endianness("big")
+  .bit4("version")
+  .bit4("headerLength")
+  .uint8("tos")
+  .uint16("packetLength")
+  .uint16("id");
+
+/**
+ * @param {string} payload base64 ip header payload
+ */
+export function process(payload) {
+  const view = ric.base64.decode(payload);
+  return IpHeaderShort.parse(view);
+}
+
+/**
+ * @test payload "RQACxZOZAAAsBu+YrcJPbIUBhtE="
+ */
+```
+
 # XML
 
 with [fast-xml-parser](https://github.com/NaturalIntelligence/fast-xml-parser)
