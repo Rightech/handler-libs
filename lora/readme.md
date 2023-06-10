@@ -3,7 +3,7 @@
 
 - https://resources.lora-alliance.org/technical-specifications/ts013-1-0-0-payload-codec-api
 
-### Uplink Decode
+### Decode Uplink
 
 ```js
 function decodeUplink(input) {
