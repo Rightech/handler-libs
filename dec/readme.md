@@ -105,7 +105,8 @@ const IpHeaderShort = new BinaryParser()
  */
 export function process(payload) {
   const view = ric.base64.decode(payload);
-  return IpHeaderShort.parse(view);
+  const { version, tos, id } = IpHeaderShort.parse(view);
+  return { version, tos, id };
 }
 
 /**
