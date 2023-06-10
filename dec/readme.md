@@ -113,6 +113,42 @@ export function process(payload) {
  */
 ```
 
+# Malformed JSON
+
+## JavaScript `eval()`
+
+```js
+/**
+ * @param {string} payload malformed json
+ */
+export function process(payload) {
+  const { x, y } = eval(`(${payload})`);
+  return { x, y };
+}
+
+/**
+ * @test payload "{x:10, y:'20',}"
+ */
+```
+
+## JSON5
+
+```js
+import JSON5 from "https://unpkg.com/json5@2.2.3/dist/index.min.mjs";
+
+/**
+ * @param {string} payload malformed json
+ */
+export function process(payload) {
+  const { x, y } = JSON5.parse(payload);
+  return { x, y };
+}
+
+/**
+ * @test payload "{x:10, y:'20',}"
+ */
+```
+
 # XML
 
 with [fast-xml-parser](https://github.com/NaturalIntelligence/fast-xml-parser)
