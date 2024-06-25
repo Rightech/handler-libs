@@ -18,3 +18,4 @@
 - [MessagePack](./dec/readme.md#messagepack)
 - [Protocol Buffers](./pbf)
 - [LoRaWAN codec API](./lora)
+- [Taiga decoder](./taiga)
